@@ -19,10 +19,3 @@ class TimeEstimate:
         hours, remainder = divmod(s, 3600)
         minutes, seconds = divmod(remainder, 60)
         return int(hours), int(minutes), int(seconds)
-
-
-timer = TimeEstimate()
-for i in range(1, 101):
-    hour, minute, second = timer.estimate(i, 100)
-    print(hour, minute, second)
-    time.sleep(1)
